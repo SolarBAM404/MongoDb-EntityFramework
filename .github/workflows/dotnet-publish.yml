@@ -6,6 +6,9 @@ on:
       - master
       - actions/publish
 
+env:
+  DOTNET_VERSION: '6.0.x'
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,7 +19,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '3.0.x'
+        dotnet-version: ${{ env.DOTNET_VERSION }}
 
     - name: Build with dotnet
       run: dotnet build --configuration Release
