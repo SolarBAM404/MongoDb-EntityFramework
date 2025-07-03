@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDbEntityFramework", "MongoDbEntityFramework.csproj", "{DE23CDC9-54BF-42A7-BBFE-61767E6316E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDbEntityFramework.Test", "MongoDbEntityFramework.Test\MongoDbEntityFramework.Test.csproj", "{83336EA6-24EC-477E-99AF-0294A034B03D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDbEntityFramework", "MongoDbEntityFramework\MongoDbEntityFramework.csproj", "{1FAEFDC2-B1E0-41AB-8127-A9FDE6EC087F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +10,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DE23CDC9-54BF-42A7-BBFE-61767E6316E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DE23CDC9-54BF-42A7-BBFE-61767E6316E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DE23CDC9-54BF-42A7-BBFE-61767E6316E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DE23CDC9-54BF-42A7-BBFE-61767E6316E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83336EA6-24EC-477E-99AF-0294A034B03D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83336EA6-24EC-477E-99AF-0294A034B03D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83336EA6-24EC-477E-99AF-0294A034B03D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83336EA6-24EC-477E-99AF-0294A034B03D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FAEFDC2-B1E0-41AB-8127-A9FDE6EC087F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FAEFDC2-B1E0-41AB-8127-A9FDE6EC087F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FAEFDC2-B1E0-41AB-8127-A9FDE6EC087F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FAEFDC2-B1E0-41AB-8127-A9FDE6EC087F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
