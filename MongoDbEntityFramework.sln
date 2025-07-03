@@ -4,8 +4,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDbEntityFramework.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDbEntityFramework", "MongoDbEntityFramework\MongoDbEntityFramework.csproj", "{1FAEFDC2-B1E0-41AB-8127-A9FDE6EC087F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDbEntityFramework.Host", "MongoDbEntityFramework.Host\MongoDbEntityFramework.Host.csproj", "{7642AFAD-D761-444B-A4C8-D759890ECE96}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,9 +18,5 @@ Global
 		{1FAEFDC2-B1E0-41AB-8127-A9FDE6EC087F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FAEFDC2-B1E0-41AB-8127-A9FDE6EC087F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FAEFDC2-B1E0-41AB-8127-A9FDE6EC087F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7642AFAD-D761-444B-A4C8-D759890ECE96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7642AFAD-D761-444B-A4C8-D759890ECE96}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7642AFAD-D761-444B-A4C8-D759890ECE96}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7642AFAD-D761-444B-A4C8-D759890ECE96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
