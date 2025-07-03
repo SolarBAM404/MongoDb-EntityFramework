@@ -1,5 +1,9 @@
 name: Publish .NET Package to NuGet
 
+permissions:
+  packages: write
+  contents: read
+
 on:
   push:
     branches:
