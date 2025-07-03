@@ -16,16 +16,16 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: ${{ env.DOTNET_VERSION }}
+    # - name: Setup .NET Core
+    #   uses: actions/setup-dotnet@v1
+    #   with:
+    #     dotnet-version: ${{ env.DOTNET_VERSION }}
 
-    - name: Build with dotnet
-      run: dotnet build --configuration Release
+    # - name: Build with dotnet
+    #   run: dotnet build --configuration Release
 
-    - name: Pack with dotnet
-      run: dotnet pack --configuration Release
+    # - name: Pack with dotnet
+    #   run: dotnet pack --configuration Release
 
     # - name: Add NuGet Source
     #   run: dotnet nuget add source --username ${{ env.GITHUB_USERNAME }} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/${{ env.GITHUB_USERNAME }}/index.json"
@@ -41,7 +41,7 @@ jobs:
         # Project name
         PROJECT_NAME: MongoDbEntityFramework
         # Key to use with nuget push
-        NUGET_API_KEY: ${{ env.PAT_GITHUB }}
+        NUGET_API_KEY: "${{ env.PAT_GITHUB }}"
         # Github GRP project namespace
         GITHUB_GPR_NAMESPACE: ${{ env.GITHUB_USERNAME }}
         # .NET version to use
