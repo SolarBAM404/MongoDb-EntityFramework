@@ -31,6 +31,3 @@ jobs:
 
     - name: Publish to GitHub Packages - MongoDb-EntityFramework
       run: dotnet nuget push "MongoDbEntityFramework/bin/Release/MongoDbEntityFramework.*.nupkg" --api-key "${{ secrets.PAT_GITHUB }}" --source "github" --skip-duplicate
-
-    - name: Publish to GitHub Packages - MongoDb-EntityFramework.Host
-      run: dotnet nuget push "MongoDbEntityFramework.Host/bin/Release/MongoDbEntityFramework.Host.*.nupkg" --api-key "${{ secrets.PAT_GITHUB }}" --source "github" --skip-duplicate
