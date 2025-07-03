@@ -28,7 +28,7 @@ jobs:
       run: dotnet pack --configuration Release
 
     - name: Add NuGet Source
-      run: dotnet nuget add source --username ${{ env.GITHUB_USERNAME }} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/${{ env.GITHUB_USERNAME }}/index.json"
+      run: dotnet nuget add source --username ${{ env.GITHUB_USERNAME }} --password ${{ github.token }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/${{ env.GITHUB_USERNAME }}/index.json"
 
     - name: Publish to GitHub Packages
-      run: dotnet nuget push "MongoDbEntityFramework/bin/Release/MongoDbEntityFramework.*.nupkg" --api-key ${{ secrets.PAT_GITHUB }} --source "github" --skip-duplicate
+      run: dotnet nuget push "MongoDbEntityFramework/bin/Release/MongoDbEntityFramework.*.nupkg" --api-key ${{ github.token }} --source "github" --skip-duplicate
