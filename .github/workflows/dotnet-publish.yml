@@ -41,7 +41,7 @@ jobs:
         # Project name
         PROJECT_NAME: MongoDbEntityFramework
         # Key to use with nuget push
-        NUGET_API_KEY: ${{ secrets.GITHUB_TOKEN }}
+        NUGET_API_KEY: ${{ env.PAT_GITHUB }}
         # Github GRP project namespace
         GITHUB_GPR_NAMESPACE: ${{ env.GITHUB_USERNAME }}
         # .NET version to use
