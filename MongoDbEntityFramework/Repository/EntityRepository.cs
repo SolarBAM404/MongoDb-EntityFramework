@@ -14,15 +14,17 @@ public class EntityRepository<TEntity> : IEntityRepository<TEntity>
     where TEntity : class, IEntity, new()
 {
 
-    private DbSettings _settings;
     private readonly IMongoCollection<TEntity> _collection;
 
+    public EntityRepository(DbContext context)
+    {
+        _collection = context.GetCollection<TEntity>();
+    }
+    
     public EntityRepository(DbSettings settings)
     {
-        _settings = settings;
-
-        MongoClient client = new(_settings.ConnString);
-        IMongoDatabase? database = client.GetDatabase(_settings.DatabaseName);
+        MongoClient client = new(settings.ConnString);
+        IMongoDatabase? database = client.GetDatabase(settings.DatabaseName);
 
         _collection = database.GetCollection<TEntity>(typeof(TEntity).Name);
     }

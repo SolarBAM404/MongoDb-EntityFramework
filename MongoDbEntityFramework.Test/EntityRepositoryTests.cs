@@ -1,18 +1,12 @@
-﻿using MongoDbEntityFramework.Models;
-using MongoDbEntityFramework.Repository;
-using MongoDbEntityFramework.Settings;
-using NUnit.Framework.Internal;
-
-namespace MongoDbEntityFramework.Test;
-
+using System.Linq.Expressions;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using MongoDbEntityFramework.Models;
+using MongoDbEntityFramework.Repository;
+using MongoDbEntityFramework.Settings;
 using Moq;
-using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
+
+namespace MongoDbEntityFramework.Test;
 
 public class SampleEntity : IEntity
 {
@@ -23,6 +17,7 @@ public class SampleEntity : IEntity
 [TestFixture]
 public class EntityRepositoryTests
 {
+    private DbContext _context;
     private Mock<IMongoCollection<SampleEntity>> _mockCollection;
     private EntityRepository<SampleEntity> _repository;
 
@@ -30,7 +25,9 @@ public class EntityRepositoryTests
     public void Setup()
     {
         _mockCollection = new Mock<IMongoCollection<SampleEntity>>();
-        _repository = new EntityRepository<SampleEntity>(new DbSettings("mongodb://root:example@localhost:27017", "TestDatabase"));
+        DbSettings dbSettings = new DbSettings("mongodb://root:example@localhost:27017", "TestDatabase");
+        _context = new DbContext(dbSettings);
+        _repository = new EntityRepository<SampleEntity>(_context);
     }
 
     [Test]
