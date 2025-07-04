@@ -6,14 +6,19 @@ namespace MongoDbEntityFramework;
 public class DbContext
 {
     private IMongoDatabase? _database;
-    
+
     public DbContext()
     {
     }
-    
+
     public DbContext(DbSettings settings)
     {
         Initialize(settings);
+    }
+    
+    public DbContext(MongoClient client, DbSettings settings)
+    {
+        Initialize(client, settings);
     }
 
     public void Initialize(DbSettings settings)
@@ -22,6 +27,14 @@ public class DbContext
             throw new ArgumentNullException(nameof(settings), "Database settings cannot be null.");
         
         MongoClient client = new MongoClient(settings.ConnString);
+        Initialize(client, settings);
+    }
+
+    public void Initialize(MongoClient client, DbSettings settings)
+    {
+        if (settings == null)
+            throw new ArgumentNullException(nameof(settings), "Database settings cannot be null.");
+        
         _database = client.GetDatabase(settings.DatabaseName);
     }
     

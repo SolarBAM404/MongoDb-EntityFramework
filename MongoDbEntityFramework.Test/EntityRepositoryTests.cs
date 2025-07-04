@@ -18,6 +18,7 @@ public class SampleEntity : IEntity
 public class EntityRepositoryTests
 {
     private DbContext _context;
+    private Mock<DbSettings> _settings;
     private Mock<IMongoCollection<SampleEntity>> _mockCollection;
     private EntityRepository<SampleEntity> _repository;
 
